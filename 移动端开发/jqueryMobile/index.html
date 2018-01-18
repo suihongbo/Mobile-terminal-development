@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div id="img-box">
+
+    </div>
+
+
+    <script>
+        var oBox = document.getElementById('img-box');
+        loadSuccess();
+        function loadSuccess() {
+            var count = 0;
+            for(var i=1; i<=6; i++){
+                for(var j=1; j<=4; j++){
+                    var oImg = document.createElement('img');
+                    var oDiv = document.createElement('div');
+                    var oBigImg = document.createElement('img');
+                    count++;
+                    oImg.className = 'img';
+                    oDiv.className = 'big-img';
+                    oBigImg.className = 'big';
+                    oImg.src = 'img/thumbs/'+count+'.jpg';
+                    oBigImg.src = 'img/'+count+'.jpg';
+                    oBox.appendChild(oImg);
+                    oBox.appendChild(oDiv);
+                    oDiv.appendChild(oBigImg);
+                    if(count == 1){
+                        oDiv.className = 'big-img first';
+                    }
+                    if(count == 24){
+                        oDiv.className = 'big-img last';
+                    }
+                }
+            }
+        }
+        $('.img').on('click',function () {
+            $('.img').toggle();
+            $(this).next().toggle();
+        })
+        $('.big-img').on('click',function () {
+            $(this).toggle();
+            $('.img').toggle();
+        })
+        $('.big-img').on('swiperight',function () {
+            $(this).hide();
+            if($(this).hasClass('first')){
+                $('.last').show();
+            }else {
+                $(this).prev().prev().show();
+            }
+        })
+        $('.big-img').on('swipeleft',function () {
+            $(this).hide();
+            if($(this).hasClass('last')){
+                $('.first').show();
+            }else{
+                $(this).next().next().show();
+            }
+        })
+
+
+    </script>
+</body>
+</html>
