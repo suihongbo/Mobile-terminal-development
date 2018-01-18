@@ -5,6 +5,8 @@
 a{
     text-decoration: none;
 }
+
+
 /*container-nav 开始 */
 #container-nav{
     height: 100px;
@@ -72,6 +74,8 @@ a{
 .col-xs-5 a:hover{
     color: #967a50;
 }
+
+
 /*carousel开始*/
 .carousel{
     position: relative;
@@ -111,5 +115,20 @@ a{
     .img-two{
         display: block;
         width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .menu-one{
+        left: 25px;
+    }
+    .col-xs-5{
+        width: 70px;
+        right: 25px;
+    }
+    .col-xs-5 span{
+        font-size: 12px;
+    }
+    .col-xs-5 a{
+        font-size: 12px;
     }
 }

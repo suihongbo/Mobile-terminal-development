@@ -6,9 +6,7 @@
 a{
     text-decoration: none;
 }
-body{
-    height: 100%;
-}
+
 .img{
     width: 25%;
     border: 3px solid #000000;
@@ -21,9 +19,16 @@ body{
     height: 100%;
     display: none;
     background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 .big-img img{
-    padding: 50% 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
     width:100%;
     display: block;
 }
