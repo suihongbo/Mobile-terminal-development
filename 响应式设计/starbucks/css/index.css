@@ -1,0 +1,167 @@
+/*carousel开始*/
+
+.carousel{
+    position: relative;
+}
+.carousel img{
+    display: block;
+}
+.carousel .img-one{
+    width: 100%;
+}
+.carousel .img-two{
+    display: none;
+}
+.ad{
+    width: 24px;
+    height: 21px;
+    padding: 0 5px;
+    background: #47474A;
+    color: rgba(255,255,255,0.7);
+    font-weight: 900;
+    font-size: 12px;
+    position: absolute;
+    top: 16px;
+    right: 32px;
+}
+.knowmore{
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+@media screen and (max-width: 991px){
+    .carousel .img-one{
+        display: none;
+    }
+    .carousel .img-two{
+        display: block;
+        width: 100%;
+    }
+    .knowmore {
+        font-size: 14px;
+        bottom: 0;
+        right: 15px;
+    }
+}
+
+/*home-rewards开始*/
+#home-rewards{
+    background: #0f0f0f;
+}
+#container{
+    width: 750px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.rewards-mark{
+    float: left;
+    width: 260px;
+    height: 145px;
+    background: #0f0f0f url("../imgstar/rewards_bg.png") 0 0 no-repeat;
+    background-size: contain;
+    padding: 75px 0 0 60px;
+}
+.rewards-mark p{
+    color: #fff;
+    font-size: 18px;
+}
+.rewards-mark img{
+    width: 160px;
+}
+.rewards-content{
+    width: 430px;
+    float: right;
+    height: 100%;
+    position: relative;
+}
+.rewards-content h3{
+    font-size: 25px;
+    color: #fff;
+    margin-top: 36px;
+}
+.rewards-content{
+    font-size: 16px;
+    color: #fff;
+}
+.rewards-btns{
+    margin-top: 20px;
+}
+.rewards-btns .btns{
+    width: 114px;
+    height: 50px;
+    border:2px solid #a98e67;
+    background: #000000;
+    text-align: center;
+    line-height: 50px;
+    color:#a98e67;
+    float: left;
+    margin-right: 20px;
+}
+.rewards-btns .btns:hover{
+    background: #a98e67;
+    color: #ffffff;
+}
+.more{
+    color: #b89f7a;
+    margin-left: 30px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 10%;
+}
+@media screen and (max-width: 767px) {
+    #home-rewards{
+        padding: 0 35px;
+    }
+    #container{
+        width: 100%;
+    }
+    .rewards-mark,.rewards-content{
+        width: 100%;
+    }
+    .rewards-mark{
+        text-align: center;
+        height: 70px;
+        padding: 55px 0;
+    }
+    .rewards-mark p{
+        font-size: 16px;
+    }
+    .rewards-content{
+        text-align: center;
+    }
+    .rewards-content h3{
+        margin-top: 0;
+    }
+    .rewards-btns{
+        margin-top: 20px;
+        padding: 17px 0;
+    }
+    .rewards-btns .btns{
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
+        width: 80%;
+    }
+    .more{
+        margin-left: 0;
+        margin-right: 7px;
+        padding: 25px 0;
+        text-align: right;
+        display: block;
+        position: static;
+    }
+}
+@media screen and (max-width: 277px){
+    .rewards-mark img{
+        height: 23px;
+    }
+}
+@media screen and (max-width: 211px){
+    .rewards-mark img{
+        display: none;
+    }
+}

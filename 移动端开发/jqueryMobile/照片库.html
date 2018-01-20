@@ -45,13 +45,15 @@
                 }
             }
         }
-        $('.img').on('click',function () {
+        $('.img').on('tap',function (e) {
             $('.img').toggle();
             $(this).next().toggle();
+            e.preventDefault();
         })
-        $('.big-img').on('click',function () {
+        $('.big-img').on('tap',function (e) {
             $(this).toggle();
             $('.img').toggle();
+            e.preventDefault();
         })
         $('.big-img').on('swiperight',function () {
             $(this).hide();
