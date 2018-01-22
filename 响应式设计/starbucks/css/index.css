@@ -15,6 +15,7 @@
 .ad{
     width: 24px;
     height: 21px;
+    line-height: 21px;
     padding: 0 5px;
     background: #47474A;
     color: rgba(255,255,255,0.7);
@@ -23,6 +24,7 @@
     position: absolute;
     top: 16px;
     right: 32px;
+    z-index: 99;
 }
 .knowmore{
     position: absolute;
@@ -163,5 +165,216 @@
 @media screen and (max-width: 211px){
     .rewards-mark img{
         display: none;
+    }
+}
+
+/*app开始*/
+#app{
+    background-color: #EFEBE8;
+    position: relative;
+}
+#app img{
+    width: 100%;
+}
+.img-o{
+    display: block;
+}
+.img-t{
+    display: none;
+}
+#app-download-qrcode{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top:50%;
+    left: 42%;
+    margin-top: -65px ;
+}
+#content-info{
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 44%;
+    margin-top: -50px;
+    -webkit-transform: translate(130px,0);
+    transform: translate(130px,0);
+}
+#content-info p{
+    font-size: 18px;
+    line-height: 28px;
+    color: #3d3d3d;
+    margin-bottom: 10px;
+}
+#content-info a{
+    color: #b89f7a;
+}
+#content-info a:hover{
+    text-decoration: underline;
+    color: #a98e67;
+}
+
+@media screen and (max-width: 767px){
+    .img-o{
+        display: none;
+    }
+    .img-t{
+        display: block;
+    }
+    #app-download-qrcode{
+        display: none;
+    }
+    #content-info{
+        padding: 4% 4% 0 4%;
+        width: 92%;
+        text-align: center;
+        position: static;
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+    #content-info p{
+        margin-top: 4%;
+        padding: 4% 0;
+        margin-bottom: 10px;
+    }
+    .udp{
+        display: block;
+        margin: 7px auto 0 auto;
+        width: 220px;
+        height: 80px;
+        background: url("../imgstar/udp-starbucks-cn.svg") center center no-repeat;
+    }
+}
+
+/*mosaic开始*/
+#mosaic{
+    position: relative;
+    overflow: hidden;
+}
+.img-left,.img-right{
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    float: left;
+}
+#mosaic img{
+    width: 100%;
+    display: block;
+}
+.img-left h2{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    color: #D81026;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+.img-left h3{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    font-weight: 900;
+    font-size: 13px;
+    color: #000;
+}
+.img-right h2{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    color: #fffffe;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+.img-right h3{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    font-weight: 900;
+    font-size: 13px;
+    color: #a98e67;
+}
+
+@media screen and (max-width: 767px){
+    .img-left,.img-right{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        float: left;
+    }
+    .img-left h2,.img-right h2{
+        width: 100%;
+        padding: 0 10%;
+    }
+}
+
+/*wsg开始*/
+#wsg{
+    background: #106e4b;
+}
+#container-ws{
+    margin: 0 auto;
+    padding: 30px 15px;
+    width: 750px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.wsg-container{
+    width: 50%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+     align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.wsg-container-img1{
+    width: 250px;
+    height: 127.5px;
+    margin: 0 25px;
+    background: url("../imgstar/wsg-title.png") center center no-repeat;
+    background-size: contain;
+}
+.wsg-container-img2{
+    width: 150px;
+    height: 150px;
+    margin: 0 25px;
+    background: url("../imgstar/wsg-qrcode.png") center center no-repeat;
+    background-size: contain;
+}
+.wsg-container-img3{
+    width: 150px;
+    height: 162px;
+    margin: 0 25px;
+    background: url("../imgstar/wsg-cup.png") center center no-repeat;
+    background-size: contain;
+}
+.wsg-container-img4{
+    width: 280px;
+    height: 142.8px;
+    margin: 0 25px;
+    background: url("../imgstar/wsg-wording.png") center center no-repeat;
+    background-size: contain;
+}
+
+
+
+@media screen and (max-width: 767px){
+    #container-ws{
+        width: 750px;
     }
 }
